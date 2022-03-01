@@ -69,15 +69,14 @@
  */
 /**
  * @typedef {Object} ApplicationManager
- * @property {Object} app - The app function manager
- * @property {CreateServer} app.createServer - Create server
- * @property {CreateServer} app.createServer - Create server
- * @property {Request} app.request - Send request + easy to use
- * @property {SuspendServer} app.suspend - The suspend function manager
- * @property {ListUsersAdmin} app.listUsers - List users from server
- * @property {CreateUser} app.createUser - Create user
- * @property {UpdateUser} app.updateUser - Update user
- * @property {ServerListAdmin} app.listServers - List all servers from panel
+ * @property {CreateServer} createServer - Create server
+ * @property {CreateServer} createServer - Create server
+ * @property {Request} request - Send request + easy to use
+ * @property {SuspendServer} suspend - The suspend function manager
+ * @property {ListUsersAdmin} listUsers - List users from server
+ * @property {CreateUser} createUser - Create user
+ * @property {UpdateUser} updateUser - Update user
+ * @property {ServerListAdmin} listServers - List all servers from panel
  */
 /**
  * @type {ApplicationManager}
