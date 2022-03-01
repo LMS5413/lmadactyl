@@ -17,3 +17,4 @@ Using NPM:
 ```
     npm install lmadactyl
 ```
+# WARN! This package is unofficial from Pterodactyl.

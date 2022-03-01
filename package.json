@@ -6,8 +6,6 @@
   "dependencies": {
     "axios": "^0.26.0",
     "check-password-strength": "^2.0.4",
-    "dotenv": "^16.0.0",
-    "lmadactyl": "^1.0.0",
     "ws": "^8.5.0"
   },
   "bugs": {
