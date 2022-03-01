@@ -1,0 +1,16 @@
+{
+  "name": "lmadctyl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "check-password-strength": "^2.0.4",
+    "dotenv": "^16.0.0",
+    "ws": "^8.5.0"
+  },
+  "bugs": {
+    "url": "https://github.com/LMS5413/lmadactyl/issues"
+  },
+  "homepage": "https://github.com/LMS5413/lmadactyl"
+}
