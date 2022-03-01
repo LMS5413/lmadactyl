@@ -12,5 +12,16 @@
   "bugs": {
     "url": "https://github.com/LMS5413/lmadactyl/issues"
   },
-  "homepage": "https://github.com/LMS5413/lmadactyl"
+  "homepage": "https://github.com/LMS5413/lmadactyl",
+  "description": "A wrapper for pterodactyl",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LMS5413/lmadactyl.git"
+  },
+  "author": "LMS5413",
+  "keywords": ["pterodactyl", "wrapper", "api", "discord-bot"]
 }
