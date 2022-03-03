@@ -3,6 +3,14 @@ const axios = require('axios')
  * @typedef {Object} resourceServerUsage
  * @property {string} object
  * @property {string} attributes - The attributes
+ * @property {string} attributes.current_state - The current state
+ * @property {Boolean} attributes.is_suspended - Whether the server is suspended or not
+ * @property {string} attributes.resources - The resources
+ * @property {string} attributes.resources.memory_bytes - The memory
+ * @property {string} attributes.resources.disk_bytes - The disk
+ * @property {string} attributes.resources.cpu_absolue - The cpu
+ * @property {string} attributes.resources.network_rx_bytes - The network rx
+ * @property {string} attributes.resources.network_tx_bytes - The network tx
  */
 /**
  * @param {string} panelUrl
@@ -29,7 +37,7 @@ async function resourceUsage(panelUrl, apiKey, serverId) {
         } catch (e) {
             if(e.response && e.response.status === 401) return res(Promise.reject(new Error("API key is not valid")))
             if(e.response?.status === 404) return res(Promise.reject(new Error("Server ID is not valid")))
-            res(Promise.reject(new Error("An error occurred while trying to catch rescources! " + e.message)))
+            res(Promise.reject(new Error("An error occurred while trying to catch resources! " + e.message)))
         }
     })
 }

@@ -5,6 +5,17 @@ const axios = require('axios')
  * @property {string} data - The data object
  * @property {string} data.object - The object in data
  * @property {string} data.attributes - The atrributes
+ * @property {string} data.attributes.uuid - UUID from server
+ * @property {string} data.attributes.name - Name from server
+ * @property {string} data.attributes.node - Node name from server
+ * @property {string} data.attributes.sftp_details - Description from server
+ * @property {string} data.attributes.sftp_details.ip - Host from SFTP
+ * @property {string} data.attributes.sftp_details.port - Port from SFTP
+ * @property {boolean} data.attributes.is_suspended - Checks whether the server is suspended or not
+ * @property {string} data.attributes.feature_limits
+ * @property {Number} data.attributes.feature_limits.databases - Databases from server
+ * @property {Number} data.attributes.feature_limits.allocations - Allocations from server
+ * @property {Number} data.attributes.feature_limits.backups - Backups from server
  */
 /**
  * @param {string} panelUrl

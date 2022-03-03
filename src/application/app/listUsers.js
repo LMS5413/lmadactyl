@@ -4,6 +4,16 @@ const axios = require('axios')
  * @property {string} object - The object
  * @property {string} data - The data
  * @property {string} data.attributes - The atrributes
+ * @property {string} data.attributes.id - The id
+ * @property {string} data.attributes.external_id - The external id
+ * @property {string} data.attributes.uuid - The uuid
+ * @property {string} data.attributes.username - The username
+ * @property {string} data.attributes.email - The email
+ * @property {string} data.attributes.first_name - The first name
+ * @property {string} data.attributes.last_name - The last name
+ * @property {string} data.attributes.language - The language
+ * @property {boolean} data.attributes.root_admin - Whether the account is admin or not
+ * @property {boolean} data.attributes.2fa - Whether the account has 2FA or not
  */
 /**
  * @param {string} panelUrl

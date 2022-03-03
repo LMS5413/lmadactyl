@@ -4,6 +4,17 @@ const { passwordStrength } = require('check-password-strength')
  * @typedef {Object} CreateUser
  * @property {string} object - The object
  * @property {string} attributes - The atrributes
+ * @property {string} attributes.id - The id
+ * @property {string} attributes.external_id - The external id
+ * @property {string} attributes.uuid - The uuid
+ * @property {string} attributes.username - The username
+ * @property {string} attributes.email - The email
+ * @property {string} attributes.first_name - The first name
+ * @property {string} attributes.last_name - The last name
+ * @property {string} attributes.language - The language
+ * @property {boolean} attributes.root_admin - Whether the account is admin or not
+ * @property {boolean} attributes.2fa - Whether the account has 2FA or not
+ * 
  */
 /**
  * @param {string} panelUrl
