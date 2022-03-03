@@ -9,7 +9,7 @@ const ws = require('ws')
  * @param {string} serverId
  * @returns {LogsConsole}
  */
-async function logs(panelUrl, apiKey, serverId, timeout=1000) {
+async function logs(panelUrl, apiKey, serverId, timeout=1000, color=false) {
     let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
@@ -36,7 +36,7 @@ async function logs(panelUrl, apiKey, serverId, timeout=1000) {
                 if(result.event !== "console output") return;
                 if(result.args[0].length === 0) return;
                 if(consoleFormed.some(x => result.args[0].includes(x))) return;
-                consoleFormed.push(result.args[0].replace(">", ""))
+                consoleFormed.push(color ? result.args[0].replace(">", ""):result.args[0].replace(">", "").replaceAll(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, ''))
             })
             request.on('close', () => {
                 return res(consoleFormed)
