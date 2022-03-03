@@ -9,7 +9,7 @@ const ws = require('ws')
  * @param {string} serverId
  * @returns {LogsConsole}
  */
-async function logs(panelUrl, apiKey, serverId, timeout=1000, color=false) {
+async function logs(panelUrl, apiKey, serverId, color=false, timeout=1000) {
     let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))

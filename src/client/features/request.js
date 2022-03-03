@@ -9,7 +9,7 @@ const axios = require('axios')
  * @param {"get" | "patch" | "post" | "delete" | "put"} method
  * @returns {Request}
  */
-async function request(endpoint, header, body=null, method) {
+async function request(endpoint, header, method, body=null) {
     let methods = ["get", "patch", "post", "delete", "put"]
     if(!methods.some(x => method.toLowerCase().includes(x))) return Promise.reject(new Error("Method is not valid, Methods valid: " + methods.join(", ").toUpperCase()))
     if (typeof endpoint !== "string") return Promise.reject(new Error("Endpoint is not a string"))
