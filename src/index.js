@@ -29,6 +29,9 @@
  *  @typedef {import('./client/features/request')} Request - Request to server
  */
 /**
+ *  @typedef {import('./client/utils/logs')} LogsConsole - Get logs from server
+ */
+/**
  * @typedef {Object} ClientManager
  * @property {Object} utils - The utils function manager
  * @property {listServer} utils.serverList - List servers from 
@@ -36,6 +39,7 @@
  * @property {sendConsoleCommand} utils.sendConsoleCommand - Send console command to server
  * @property {sendSignal} utils.sendSignal - Send signal to server
  * @property {ListUsers} utils.listUsers - List users from server
+ * @property {LogsConsole} utils.logs - Logs from the server
  * @property {Object} account - The Account manager
  * @property {updatePassword} account.updatePassword - Update password function
  * @property {AccountDetail} account.accountDetail - Account detail function
