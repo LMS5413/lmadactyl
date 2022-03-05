@@ -7,9 +7,7 @@ for (let file of filesClient) {
         object.push({[file2.split('.')[0]]: func, category: file})
     }
 }
-let arrumado = (object) => {
-    return Object.keys({...object}).map(x => object[x])
-}
+const arrumado = (object) => Object.keys({...object}).map(x => object[x])
 const ARRAY = arrumado(object)
 
 const CATEGORIES = [...new Set(ARRAY.map(e => e.category))]

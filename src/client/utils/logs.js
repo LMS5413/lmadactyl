@@ -14,6 +14,7 @@ async function logs(panelUrl, apiKey, serverId, color=false, timeout=1000) {
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     if (typeof serverId !== "string") return Promise.reject(new Error("Server ID is not a string"))
+    if(timeout > (3 * 60 * 1000)) return Promise.reject(new Error("Timeout is too high. Time max: 3 minutes"))
     return new Promise(async res => {
         try {
             const response2 = await axios({
@@ -28,17 +29,22 @@ async function logs(panelUrl, apiKey, serverId, color=false, timeout=1000) {
             let consoleFormed = []
             const request = new ws(response2.data.data.socket, {origin: urlFormed});
             request.on('open', async (reason) => {
+                console.log(`Iniciado em ${new Date().toString()}`)
                 request.send(JSON.stringify({"event": "auth", "args": [response2.data.data.token]}))
             })
             request.on('message', (msg) => {
                 let result = JSON.parse(Buffer.from(msg, 'base64').toString())
                 request.send(JSON.stringify({"event": "send logs", "args": [null]}))
+                if(result.event === "token expired" || result.event === "token expiring") {
+                    console.log("Acabo!")
+                    return request.close("token expired")
+                }
                 if(result.event !== "console output") return;
                 if(result.args[0].length === 0) return;
                 if(consoleFormed.some(x => result.args[0].includes(x))) return;
                 consoleFormed.push(color ? result.args[0].replace(">", ""):result.args[0].replace(">", "").replaceAll(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, ''))
             })
-            request.on('close', () => {
+            request.on('close', (reason) => {
                 return res(consoleFormed)
             })
             request.on('error', () => {
