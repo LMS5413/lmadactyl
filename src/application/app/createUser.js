@@ -56,7 +56,7 @@ async function createUser(panelUrl, apiKey, email, password, username, name, las
             return res(response.data)
         } catch (e) {
             if (e.response && e.response.status === 401) return res(Promise.reject(new Error("API key is not valid")))
-            res(Promise.reject(new Error("An error occurred while trying to create server! " + e.response?.data ? JSON.stringify(e.response.data.errors) : e.message)))
+            res(Promise.reject(new Error("An error occurred while trying to create user! " + e.response?.data ? JSON.stringify(e.response.data.errors) : e.message)))
         }
     })
 }

@@ -80,7 +80,7 @@
  * @property {ListUsersAdmin} listUsers - List users from server
  * @property {CreateUser} createUser - Create user
  * @property {UpdateUser} updateUser - Update user
- * @property {ServerListAdmin} listServers - List all servers from panel
+ * @property {ServerListAdmin} serverList - List all servers from panel
  */
 /**
  * @type {ApplicationManager}

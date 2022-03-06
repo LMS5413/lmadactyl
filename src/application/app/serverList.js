@@ -49,8 +49,8 @@ async function listServers(panelUrl, apiKey) {
             })
             return res(response.data)
         } catch (e) {
-            if(e.response && e.response.status === 401) return res(Promise.reject({message: "API key is not valid"}))
-            res(Promise.reject({message: "An error occurred while trying to list servers! " + e.message}))
+            if(e.response && (e.response.status === 401 || e.response.status === 403)) return res(Promise.reject(new Error("API key is not valid")))
+            res(Promise.reject(new Error("An error occurred while trying to list servers! " + e.message)))
         }
     })
 }

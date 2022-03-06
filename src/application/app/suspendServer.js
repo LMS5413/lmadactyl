@@ -29,7 +29,7 @@ async function suspendServer(panelUrl, apiKey, serverId, suspend=true) {
             if(e.response && e.response.status === 401) return res(Promise.reject(new Error("API key is not valid")))
             if(e.response?.status === 404) return res(Promise.reject(new Error("Server ID is not valid")))
             if(e.response?.status === 422) return res(Promise.reject(new Error("Signal is not valid")))
-            res(Promise.reject({message: "An error occurred while trying to suspend/unsuspend server! " + e.message}))
+            res(Promise.reject(new Error("An error occurred while trying to suspend/unsuspend server! ")))
         }
     })
 }

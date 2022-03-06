@@ -27,4 +27,4 @@ module.exports = Object.fromEntries([
             filtered.reduce((acc, curr) => ({ ...acc, ...curr }), {})
         ]
     })
-])
+]).app
