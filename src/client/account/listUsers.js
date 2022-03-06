@@ -2,8 +2,8 @@ const axios = require('axios')
 /**
  * @typedef {Object} ListUsers
  * @property {string} object - The object
- * @property {string} data - The data
- * @property {string} data.attributes - The atrributes
+ * @property {Object} data - The data
+ * @property {Object} data.attributes - The atrributes
  * @property {string} data.attributes.uuid - The uuid
  * @property {string} data.attributes.username - The username
  * @property {string} data.attributes.email - The email

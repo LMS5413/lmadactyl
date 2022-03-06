@@ -2,7 +2,7 @@ const axios = require('axios')
 /**
  * @typedef {Object} resourceServerUsage
  * @property {string} object
- * @property {string} attributes - The attributes
+ * @property {Object} attributes - The attributes
  * @property {string} attributes.current_state - The current state
  * @property {Boolean} attributes.is_suspended - Whether the server is suspended or not
  * @property {string} attributes.resources - The resources

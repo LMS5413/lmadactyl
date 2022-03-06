@@ -1,8 +1,15 @@
 const axios = require('axios')
 /**
  * @typedef {Object} AccountDetail
- * @property {string} panelUrl- The panel URL
- * @property {string} apiKey - The API key
+ * @property {string} object - The object
+ * @property {Object} attributes - The attributes
+ * @property {Number} attributes.id - The ID
+ * @property {string} attributes.username - The username
+ * @property {string} attributes.email - The email
+ * @property {string} attributes.first_name - The first name
+ * @property {string} attributes.last_name - The last name
+ * @property {string} attributes.language - The language
+ * @property {Boolean} attributes.admin - Whether the account is an admin or not
  */
 /**
  * @param {string} panelUrl

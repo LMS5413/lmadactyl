@@ -2,9 +2,9 @@ const axios = require('axios')
 /**
  * @typedef {Object} ServerList
  * @property {string} object- The object
- * @property {string} data - The data object
+ * @property {Object} data - The data object
  * @property {string} data.object - The object in data
- * @property {string} data.attributes - The atrributes
+ * @property {Object} data.attributes - The atrributes
  * @property {string} data.attributes.uuid - UUID from server
  * @property {string} data.attributes.name - Name from server
  * @property {string} data.attributes.node - Node name from server

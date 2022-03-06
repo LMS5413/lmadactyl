@@ -1,9 +1,6 @@
 const axios = require('axios')
 /**
  * @typedef {Object} EmailUpdate
- * @property {string} email- The new email
- * @property {string} panelUrl- The panel URL
- * @property {string} apiKey - The API key
  */
 /**
  * @param {string} email

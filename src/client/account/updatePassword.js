@@ -2,10 +2,6 @@ const axios = require('axios')
 const { passwordStrength } = require('check-password-strength')
 /**
  * @typedef {Object} PasswordUpdate
- * @property {string} currentPassword - The current password
- * @property {string} newPassword - The new password
- * @property {string} panelUrl - The panel URL
- * @property {string} apiKey - The API key
  */
 /**
  * @param {string} panelUrl
