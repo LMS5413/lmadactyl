@@ -14,7 +14,7 @@ const axios = require('axios')
  * @property {string} attributes.sftp_details.ip - Host from SFTP
  * @property {string} attributes.sftp_details.port - Port from SFTP
  * @property {boolean} attributes.is_suspended - Checks whether the server is suspended or not
- * @property {string} attributes.feature_limits
+ * @property {Object} attributes.feature_limits
  * @property {Number} attributes.feature_limits.databases - Databases from server
  * @property {Number} attributes.feature_limits.allocations - Allocations from server
  * @property {Number} attributes.feature_limits.backups - Backups from server

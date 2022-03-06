@@ -5,7 +5,7 @@ const axios = require('axios')
  * @property {Object} attributes - The attributes
  * @property {string} attributes.current_state - The current state
  * @property {Boolean} attributes.is_suspended - Whether the server is suspended or not
- * @property {string} attributes.resources - The resources
+ * @property {Object} attributes.resources - The resources
  * @property {string} attributes.resources.memory_bytes - The memory
  * @property {string} attributes.resources.disk_bytes - The disk
  * @property {string} attributes.resources.cpu_absolue - The cpu
