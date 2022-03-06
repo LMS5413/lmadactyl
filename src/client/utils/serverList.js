@@ -2,20 +2,22 @@ const axios = require('axios')
 /**
  * @typedef {Object} ServerList
  * @property {string} object- The object
- * @property {Object} data - The data object
- * @property {string} data.object - The object in data
- * @property {Object} data.attributes - The atrributes
- * @property {string} data.attributes.uuid - UUID from server
- * @property {string} data.attributes.name - Name from server
- * @property {string} data.attributes.node - Node name from server
- * @property {string} data.attributes.sftp_details - Description from server
- * @property {string} data.attributes.sftp_details.ip - Host from SFTP
- * @property {string} data.attributes.sftp_details.port - Port from SFTP
- * @property {boolean} data.attributes.is_suspended - Checks whether the server is suspended or not
- * @property {string} data.attributes.feature_limits
- * @property {Number} data.attributes.feature_limits.databases - Databases from server
- * @property {Number} data.attributes.feature_limits.allocations - Allocations from server
- * @property {Number} data.attributes.feature_limits.backups - Backups from server
+ * @property {Array<ObjectServerList>} data - The data object
+ /** 
+ * @typedef {Object} ObjectServerList
+ * @property {string} object - The object in data
+ * @property {Object} attributes - The atrributes
+ * @property {string} attributes.uuid - UUID from server
+ * @property {string} attributes.name - Name from server
+ * @property {string} attributes.node - Node name from server
+ * @property {string} attributes.sftp_details - Description from server
+ * @property {string} attributes.sftp_details.ip - Host from SFTP
+ * @property {string} attributes.sftp_details.port - Port from SFTP
+ * @property {boolean} attributes.is_suspended - Checks whether the server is suspended or not
+ * @property {string} attributes.feature_limits
+ * @property {Number} attributes.feature_limits.databases - Databases from server
+ * @property {Number} attributes.feature_limits.allocations - Allocations from server
+ * @property {Number} attributes.feature_limits.backups - Backups from server
  */
 /**
  * @param {string} panelUrl

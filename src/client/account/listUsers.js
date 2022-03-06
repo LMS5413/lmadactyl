@@ -2,20 +2,22 @@ const axios = require('axios')
 /**
  * @typedef {Object} ListUsers
  * @property {string} object - The object
- * @property {Object} data - The data
- * @property {Object} data.attributes - The atrributes
- * @property {string} data.attributes.uuid - The uuid
- * @property {string} data.attributes.username - The username
- * @property {string} data.attributes.email - The email
- * @property {string} data.attributes.image- The image
- * @property {Array} data.attributes.permissions - The permissions
- * @property {boolean} data.attributes.2fa_enabled - Whether the account has 2FA or not
+ * @property {Array<ObjectListUsers>} data - The data
+ /** 
+ * @typedef {Object} ObjectListUsers
+ * @property {Object} attributes - The atrributes
+ * @property {string} attributes.uuid - The uuid
+ * @property {string} attributes.username - The username
+ * @property {string} attributes.email - The email
+ * @property {string} attributes.image- The image
+ * @property {Array} attributes.permissions - The permissions
+ * @property {boolean} attributes.2fa_enabled - Whether the account has 2FA or not
  */
 /**
  * @param {string} panelUrl
  * @param {string} apiKey
  * @param {string} serverId
- * @returns {ListUsers}
+ * @returns {Array<ListUsers>}
  */
 async function listUsers(panelUrl, apiKey, serverId) {
     let urlFormed = new URL(panelUrl).origin

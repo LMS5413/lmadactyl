@@ -2,18 +2,21 @@ const axios = require('axios')
 /**
  * @typedef {Object} ListUsersAdmin
  * @property {string} object - The object
- * @property {object} data - The data
- * @property {string} data.attributes - The atrributes
- * @property {string} data.attributes.id - The id
- * @property {string} data.attributes.external_id - The external id
- * @property {string} data.attributes.uuid - The uuid
- * @property {string} data.attributes.username - The username
- * @property {string} data.attributes.email - The email
- * @property {string} data.attributes.first_name - The first name
- * @property {string} data.attributes.last_name - The last name
- * @property {string} data.attributes.language - The language
- * @property {boolean} data.attributes.root_admin - Whether the account is admin or not
- * @property {boolean} data.attributes.2fa - Whether the account has 2FA or not
+ * @property {Array<ObjectListUsers>} data - The data
+ /**
+ * @typedef {Object} ObjectListUsers
+ * @property {string} object - The object
+ * @property {Object} attributes - The atrributes
+ * @property {string} attributes.id - The id
+ * @property {string} attributes.external_id - The external id
+ * @property {string} attributes.uuid - The uuid
+ * @property {string} attributes.username - The username
+ * @property {string} attributes.email - The email
+ * @property {string} attributes.first_name - The first name
+ * @property {string} attributes.last_name - The last name
+ * @property {string} attributes.language - The language
+ * @property {boolean} attributes.root_admin - Whether the account is admin or not
+ * @property {boolean} attributes.2fa - Whether the account has 2FA or not
  */
 /**
  * @param {string} panelUrl
