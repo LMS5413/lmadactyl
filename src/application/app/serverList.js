@@ -5,7 +5,7 @@ const axios = require('axios')
  * @property {Array<ObjectListServersAdmin>} data - The data
  /**
  * @typedef {Object} ObjectListServersAdmin
- * @property {object} attributes - The atrributes
+ * @property {Object} attributes - The atrributes
  * @property {string} attributes.id - ID from server
  * @property {string} attributes.external_id - External id from server
  * @property {string} attributes.uuid - UUID from server
@@ -13,22 +13,22 @@ const axios = require('axios')
  * @property {string} attributes.identifier - Identifier from server
  * @property {string} attributes.description - Description from server
  * @property {boolean} attributes.suspended - Checks whether the server is suspended or not
- * @property {string} attributes.limits - Limits from server
+ * @property {Number} attributes.user - Owner ID from server
+ * @property {Number} attributes.node - Node ID from server
+ * @property {Number} attributes.allocation - Allocation ID from server
+ * @property {Number} attributes.nest - Nest ID from server
+ * @property {Number} attributes.egg - Egg ID from server
+ * @property {object} attributes.feature_limits
+ * @property {Number} attributes.feature_limits.databases - Databases from server
+ * @property {Number} attributes.feature_limits.allocations - Allocations from server
+ * @property {Number} attributes.feature_limits.backups - Backups from server
+ * @property {Object} attributes.limits - Limits from server
  * @property {Number} attributes.limits.memory - Memory from server
  * @property {Number} attributes.limits.disk - Disk from server
  * @property {Number} attributes.limits.cpu - CPU from server
  * @property {Number} attributes.limits.io - IO from server
  * @property {Number} attributes.limits.swap - Swap from server
  * @property {Number} attributes.limits.theards - Threads from server
- * @property {string} attributes.feature_limits
- * @property {Number} attributes.feature_limits.databases - Databases from server
- * @property {Number} attributes.feature_limits.allocations - Allocations from server
- * @property {Number} attributes.feature_limits.backups - Backups from server
- * @property {Number} attributes.user - Owner ID from server
- * @property {Number} attributes.node - Node ID from server
- * @property {Number} attributes.allocation - Allocation ID from server
- * @property {Number} attributes.nest - Nest ID from server
- * @property {Number} attributes.egg - Egg ID from server
  */
 /**
  * @param {string} panelUrl
