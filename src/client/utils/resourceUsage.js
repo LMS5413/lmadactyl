@@ -11,6 +11,7 @@ const axios = require('axios')
  * @property {string} attributes.resources.cpu_absolue - The cpu
  * @property {string} attributes.resources.network_rx_bytes - The network rx
  * @property {string} attributes.resources.network_tx_bytes - The network tx
+ * @property {string} attributes.resources.uptime - The uptime from server
  */
 /**
  * @param {string} panelUrl
