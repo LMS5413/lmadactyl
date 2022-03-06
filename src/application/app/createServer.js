@@ -2,7 +2,7 @@ const axios = require('axios')
 /**
  * @typedef {Object} CreateServer
  * @property {string} object - The object
- * @property {string} attributes - The atrributes
+ * @property {object} attributes - The atrributes
  * @property {string} attributes.id - ID from server
  * @property {string} attributes.external_id - External id from server
  * @property {string} attributes.uuid - UUID from server

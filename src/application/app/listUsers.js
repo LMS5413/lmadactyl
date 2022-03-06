@@ -2,7 +2,7 @@ const axios = require('axios')
 /**
  * @typedef {Object} ListUsersAdmin
  * @property {string} object - The object
- * @property {string} data - The data
+ * @property {object} data - The data
  * @property {string} data.attributes - The atrributes
  * @property {string} data.attributes.id - The id
  * @property {string} data.attributes.external_id - The external id

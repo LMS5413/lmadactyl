@@ -3,7 +3,7 @@ const { passwordStrength } = require('check-password-strength')
 /**
  * @typedef {Object} CreateUser
  * @property {string} object - The object
- * @property {string} attributes - The atrributes
+ * @property {object} attributes - The atrributes
  * @property {string} attributes.id - The id
  * @property {string} attributes.external_id - The external id
  * @property {string} attributes.uuid - The uuid

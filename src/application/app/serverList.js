@@ -2,8 +2,8 @@ const axios = require('axios')
 /**
  * @typedef {Object} ListServersAdmin
  * @property {string} object - The object
- * @property {string} data - The data
- * @property {string} data.attributes - The atrributes
+ * @property {object} data - The data
+ * @property {object} data.attributes - The atrributes
  * @property {string} data.attributes.id - ID from server
  * @property {string} data.attributes.external_id - External id from server
  * @property {string} data.attributes.uuid - UUID from server
