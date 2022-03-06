@@ -6,12 +6,12 @@ const axios = require('axios')
  * @property {string} attributes.current_state - The current state
  * @property {Boolean} attributes.is_suspended - Whether the server is suspended or not
  * @property {Object} attributes.resources - The resources
- * @property {string} attributes.resources.memory_bytes - The memory
- * @property {string} attributes.resources.disk_bytes - The disk
- * @property {string} attributes.resources.cpu_absolue - The cpu
- * @property {string} attributes.resources.network_rx_bytes - The network rx
- * @property {string} attributes.resources.network_tx_bytes - The network tx
- * @property {string} attributes.resources.uptime - The uptime from server
+ * @property {Number} attributes.resources.memory_bytes - The memory
+ * @property {Number} attributes.resources.disk_bytes - The disk
+ * @property {Number} attributes.resources.cpu_absolue - The cpu
+ * @property {Number} attributes.resources.network_rx_bytes - The network rx
+ * @property {Number} attributes.resources.network_tx_bytes - The network tx
+ * @property {Number} attributes.resources.uptime - The uptime from server
  */
 /**
  * @param {string} panelUrl
