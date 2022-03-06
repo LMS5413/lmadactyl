@@ -8,7 +8,7 @@ const axios = require('axios')
  * @property {Object} attributes.resources - The resources
  * @property {Number} attributes.resources.memory_bytes - The memory
  * @property {Number} attributes.resources.disk_bytes - The disk
- * @property {Number} attributes.resources.cpu_absolue - The cpu
+ * @property {Number} attributes.resources.cpu_absolute - The cpu
  * @property {Number} attributes.resources.network_rx_bytes - The network rx
  * @property {Number} attributes.resources.network_tx_bytes - The network tx
  * @property {Number} attributes.resources.uptime - The uptime from server
