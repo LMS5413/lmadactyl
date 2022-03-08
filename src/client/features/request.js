@@ -28,7 +28,6 @@ async function request(endpoint, header, method, body=null) {
             } else {
                 delete object.data
             }
-            console.log(object)
             const response = await axios(object)
             return res(response.data)
         } catch (e) {
