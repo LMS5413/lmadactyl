@@ -29,6 +29,11 @@ const axios = require('axios')
  * @property {Number} attributes.limits.io - IO from server
  * @property {Number} attributes.limits.swap - Swap from server
  * @property {Number} attributes.limits.theards - Threads from server
+ * @property {Object} attributes.container - Container config
+ * @property {string} attributes.container.startup_command - Startup command from server
+ * @property {string} attributes.container.image - Image from server
+ * @property {Boolean} attributes.container.installed - Installed from server
+ * @property {Object} attributes.container.environment - Config environment from server
  */
 /**
  * @param {string} panelUrl

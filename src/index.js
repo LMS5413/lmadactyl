@@ -75,7 +75,6 @@
  * @typedef {Object} ApplicationManager
  * @property {CreateServer} createServer - Create server
  * @property {CreateServer} createServer - Create server
- * @property {Request} request - Send request + easy to use
  * @property {SuspendServer} suspend - The suspend function manager
  * @property {ListUsersAdmin} listUsers - List users from server
  * @property {CreateUser} createUser - Create user
