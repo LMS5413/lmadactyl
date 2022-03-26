@@ -49,7 +49,7 @@ async function createUser(panelUrl, apiKey, email, password, username, name, las
                     "email": email,
                     "password": password,
                     "username": username,
-                    "name": name,
+                    "first_name": name,
                     "last_name": last_name
                 }
             })
