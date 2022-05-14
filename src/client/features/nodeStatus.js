@@ -1,7 +1,7 @@
 const axios = require('axios')
 /**
  * @typedef {Object} NodeStatus
- * @property {string} node- The node name
+ * @property {string} node - The node name
  * @property {string} online - The status node is online or not
  */
 /**
