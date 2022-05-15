@@ -17,13 +17,13 @@ async function updateUser(panelUrl, apiKey, userId, object) {
     if(typeof userId !== "string") return Promise.reject(new Error("User id is not a string"))
     if(typeof object !== "object") return Promise.reject(new Error("Object is not an object"))
     return new Promise(async res => {
-        let passwordStrengthResult = passwordStrength(object.password ?? null).value
+        let passwordStrengthResult = passwordStrength(object.password ?? null).value.toLowerCase()
         try {
             if(object.password) {
                 if (passwordStrengthResult !== "medium" && passwordStrengthResult !== "strong") console.log("WARN! Password is not secure enough")
             }
             const response = await axios({
-                method: 'POST',
+                method: 'PATCH',
                 url: urlFormed + '/api/application/users/' + userId,
                 headers: {
                     'Authorization': 'Bearer ' + apiKey,
