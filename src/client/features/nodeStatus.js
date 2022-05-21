@@ -2,7 +2,8 @@ const axios = require('axios')
 /**
  * @typedef {Object} NodeStatus
  * @property {string} node - The node name
- * @property {string} online - The status node is online or not
+ * @property {Boolean} online - The status node is online or not
+ * @property {Boolean} maintence - The status node is in maintence or not
  */
 /**
  * @param {string} panelUrl
@@ -28,14 +29,14 @@ async function nodeStatus(panelUrl, apiKey) {
                 try {
                     let check = await axios.get(`${i.attributes.scheme}://${i.attributes.fqdn}:${i.attributes.daemon_listen}`)
                     if (check.status === 200 || check.status === 401) {
-                        array.push({node: i.attributes.name, online: true})
+                        array.push({node: i.attributes.name, online: true, maintence: i.attributes.maintenance_mode})
                     }
-                    console.log(check)
                 } catch (e) {
+                    console.log(i.attributes.maintenance_mode)
                     if(e.message.includes("Hostname/IP does not match certificate's altnames") || e.message.includes("status code 401")) {
-                        array.push({node: i.attributes.name, online: true})
+                        array.push({node: i.attributes.name, online: true, maintence: i.attributes.maintenance_mode})
                     } else {
-                        array.push({node: i.attributes.name, online: false})
+                        array.push({node: i.attributes.name, online: false, maintence: i.attributes.maintenance_mode})
                     }
                 }
             }
