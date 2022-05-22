@@ -35,7 +35,7 @@ async function createUser(panelUrl, apiKey, email, password, username, name, las
     if (typeof username !== "string" || typeof name !== "string" || typeof last_name !== "string") return Promise.reject(new Error(
         `Username/name/lastname is not a string \n \n ${typeof username !== "string" ? "Username: Not string" : "Username: Is String"} \n ${typeof name !== "string" ? "Name: Not string" : "Name: Is String"} \n ${typeof last_name !== "string" ? "Last name: Not string" : "Last name: Is String"}`))
     return new Promise(async res => {
-        let passwordStrengthResult = passwordStrength(password).value
+        let passwordStrengthResult = passwordStrength(password).value.toLowerCase()
         try {
             if (passwordStrengthResult !== "medium" && passwordStrengthResult !== "strong") console.log("WARN! Password is not secure enough")
             const response = await axios({
