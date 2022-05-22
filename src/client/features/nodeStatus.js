@@ -32,7 +32,6 @@ async function nodeStatus(panelUrl, apiKey) {
                         array.push({node: i.attributes.name, online: true, maintence: i.attributes.maintenance_mode})
                     }
                 } catch (e) {
-                    console.log(i.attributes.maintenance_mode)
                     if(e.message.includes("Hostname/IP does not match certificate's altnames") || e.message.includes("status code 401")) {
                         array.push({node: i.attributes.name, online: true, maintence: i.attributes.maintenance_mode})
                     } else {
