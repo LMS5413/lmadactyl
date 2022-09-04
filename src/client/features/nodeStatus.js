@@ -8,7 +8,7 @@ const axios = require('axios')
 /**
  * @param {string} panelUrl
  * @param {string} apiKey
- * @returns {Array<NodeStatus>}
+ * @returns {Promise<Array<NodeStatus>>}
  */
 async function nodeStatus(panelUrl, apiKey) {
     let urlFormed = new URL(panelUrl).origin

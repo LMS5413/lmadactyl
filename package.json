@@ -1,6 +1,6 @@
 {
   "name": "lmadactyl",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "main": "src/index.js",
   "license": "ISC",
   "dependencies": {

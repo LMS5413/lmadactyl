@@ -8,7 +8,7 @@ const { passwordStrength } = require('check-password-strength')
  * @param {string} apiKey
  * @param {string} currentPassword
  * @param {string} newPassword
- * @returns {PasswordUpdate}
+ * @returns {Promise<PasswordUpdate>}
  */
 async function updatePassword(panelUrl, apiKey, currentPassword ,newPassword) {
     let urlFormed = new URL(panelUrl).origin

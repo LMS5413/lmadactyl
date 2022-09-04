@@ -72,6 +72,9 @@
  *  @typedef {import('./application/app/serverList')} ServerListAdmin - List all servers from panel
  */
 /**
+ *  @typedef {import('./application/app/listNode')} ListNode - List all nodes from panel
+ */
+/**
  * @typedef {Object} ApplicationManager
  * @property {CreateServer} createServer - Create server
  * @property {CreateServer} createServer - Create server
@@ -80,6 +83,7 @@
  * @property {CreateUser} createUser - Create user
  * @property {UpdateUser} updateUser - Update user
  * @property {ServerListAdmin} serverList - List all servers from panel
+ * @property {ListNode} listNode - List all nodes from panel
  */
 /**
  * @type {ApplicationManager}

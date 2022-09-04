@@ -14,7 +14,7 @@ const axios = require('axios')
 /**
  * @param {string} panelUrl
  * @param {string} apiKey
- * @returns {AccountDetail}
+ * @returns {Promise<AccountDetail>}
  */
 async function accountDetail(panelUrl, apiKey) {
     let urlFormed = new URL(panelUrl).origin

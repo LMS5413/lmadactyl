@@ -24,7 +24,7 @@ const { passwordStrength } = require('check-password-strength')
  * @param {string} username
  * @param {string} name
  * @param {string} last_name
- * @returns {CreateUser}
+ * @returns {Promise<CreateUser>}
  */
 async function createUser(panelUrl, apiKey, email, password, username, name, last_name) {
     let urlFormed = new URL(panelUrl).origin

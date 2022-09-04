@@ -4,7 +4,7 @@ const axios = require('axios')
  */
 /**
  * @param {string} email
- * @returns {EmailUpdate}
+ * @returns {Promise<EmailUpdate>}
  */
 async function updateEmail(panelUrl, apiKey, email) {
     let urlFormed = new URL(panelUrl).origin

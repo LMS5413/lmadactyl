@@ -6,7 +6,7 @@ const axios = require('axios')
  * @param {string} panelUrl
  * @param {string} apiKey
  * @param {boolean} suspend
- * @returns {SuspendServer}
+ * @returns {Promise<SuspendServer>}
  */
 async function suspendServer(panelUrl, apiKey, serverId, suspend=true) {
     let urlFormed = new URL(panelUrl).origin

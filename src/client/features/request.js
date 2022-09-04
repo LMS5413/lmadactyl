@@ -7,7 +7,7 @@ const axios = require('axios')
  * @param {string} header
  * @param {string} body
  * @param {"get" | "patch" | "post" | "delete" | "put"} method
- * @returns {Request}
+ * @returns {Promise<Request>}
  */
 async function request(endpoint, header, method, body=null) {
     let methods = ["get", "patch", "post", "delete", "put"]

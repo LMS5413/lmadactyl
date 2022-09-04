@@ -31,7 +31,7 @@ const axios = require('axios')
  * @param {string} panelUrl
  * @param {string} apiKey
  * @param {string} object
- * @returns {CreateServer}
+ * @returns {Promise<CreateServer>}
  */
 async function createServer(panelUrl, apiKey,object) {
     let urlFormed = new URL(panelUrl).origin

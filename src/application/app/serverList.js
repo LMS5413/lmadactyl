@@ -38,7 +38,7 @@ const axios = require('axios')
 /**
  * @param {string} panelUrl
  * @param {string} apiKey
- * @returns {ListServersAdmin}
+ * @returns {Promise<ListServersAdmin>}
  */
 async function listServers(panelUrl, apiKey) {
     let urlFormed = new URL(panelUrl).origin
