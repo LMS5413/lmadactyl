@@ -19,3 +19,4 @@ Using NPM:
 ```
 [Documentation](https://lmadactyl.js.org/)
 # WARN! This package is unofficial from Pterodactyl.
+<img src="https://packagequality.com/badge/lmadactyl.png"/>
