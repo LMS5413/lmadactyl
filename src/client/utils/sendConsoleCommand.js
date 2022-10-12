@@ -12,8 +12,8 @@ const ws = require('ws')
  * @returns {sendConsole}
  */
 async function serverConsoleCommand(panelUrl, apiKey, command, serverId, color=false) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     if (typeof serverId !== "string") return Promise.reject(new Error("Server ID is not a string"))
     if (typeof command !== "string") return Promise.reject(new Error("Command is not a string"))

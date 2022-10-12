@@ -10,8 +10,8 @@ const ws = require('ws')
  * @returns {LogsConsole}
  */
 async function logs(panelUrl, apiKey, serverId, color=false, timeout=1000) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     if (typeof serverId !== "string") return Promise.reject(new Error("Server ID is not a string"))
     if(timeout > (3 * 60 * 1000)) return Promise.reject(new Error("Timeout is too high. Time max: 3 minutes"))

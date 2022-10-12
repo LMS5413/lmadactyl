@@ -34,8 +34,8 @@ const axios = require('axios')
  * @returns {Promise<CreateServer>}
  */
 async function createServer(panelUrl, apiKey,object) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     if(typeof object !== "object") return Promise.reject("Object is not a object")
     return new Promise(async res => {

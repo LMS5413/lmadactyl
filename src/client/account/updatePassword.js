@@ -11,8 +11,8 @@ const { passwordStrength } = require('check-password-strength')
  * @returns {Promise<PasswordUpdate>}
  */
 async function updatePassword(panelUrl, apiKey, currentPassword ,newPassword) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("URL panel is not a string"))
     if (typeof newPassword !== "string" || typeof currentPassword !== "string") return Promise.reject({message: "Password is not a string"})
     if(currentPassword === newPassword) return Promise.reject({message: "New password is the same as current password"})

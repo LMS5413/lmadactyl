@@ -27,8 +27,8 @@ const { passwordStrength } = require('check-password-strength')
  * @returns {Promise<CreateUser>}
  */
 async function createUser(panelUrl, apiKey, email, password, username, name, last_name) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     if (typeof email !== "string") return Promise.reject(new Error("Email is not a string"))
     if (typeof password !== "string") return Promise.reject(new Error("Password is not a string"))

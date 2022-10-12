@@ -9,8 +9,8 @@ const axios = require('axios')
  * @returns {Promise<SuspendServer>}
  */
 async function suspendServer(panelUrl, apiKey, serverId, suspend=true) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     if (typeof suspend !== "boolean") return Promise.reject(new Error("Signal is not a boolean"))
     return new Promise(async res => {

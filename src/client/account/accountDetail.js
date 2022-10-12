@@ -17,8 +17,8 @@ const axios = require('axios')
  * @returns {Promise<AccountDetail>}
  */
 async function accountDetail(panelUrl, apiKey) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     return new Promise(async res => {
         try {

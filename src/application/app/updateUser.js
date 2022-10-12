@@ -11,8 +11,8 @@ const { passwordStrength } = require('check-password-strength')
  * @returns {Promise<UpdateUser>}
  */
 async function updateUser(panelUrl, apiKey, userId, object) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     if(typeof userId !== "string") return Promise.reject(new Error("User id is not a string"))
     if(typeof object !== "object") return Promise.reject(new Error("Object is not an object"))

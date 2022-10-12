@@ -9,9 +9,9 @@ const axios = require('axios')
  * @returns {sendSignal}
  */
 async function sendSignal(panelUrl, apiKey, serverId, signal) {
+    if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
     let urlFormed = new URL(panelUrl).origin
     let signals = ["start", "kill", "stop", "restart"]
-    if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     if (typeof signal !== "string") return Promise.reject(new Error("Signal is not a string"))
     if (!signals.some(x => signal.toLowerCase().includes(x))) return Promise.reject(new Error("Signal is not valid. Signals valid: " + signals.join(", ")))

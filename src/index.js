@@ -51,8 +51,8 @@
 /**
  * @type {ClientManager}
  */
- let init_client = require(`./client/packages.js`);
- module.exports.client = init_client
+ let init_client = require(`./client/packages.js`); 
+ module.exports = init_client
 /**
  *  @typedef {import('./application/app/createServer')} CreateServer - Create server
  */

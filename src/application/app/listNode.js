@@ -33,8 +33,8 @@ const axios = require('axios')
  * @returns {Promise<ObjectNodeList>}
  */
 async function listUsers(panelUrl, apiKey, id) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("URL panel is not a string"))
     if (id && isNaN(id)) return Promise.reject(new Error("Node id is not a number"))
     return new Promise(async res => {

@@ -20,8 +20,8 @@ const axios = require('axios')
  * @returns {resourceServerUsage}
  */
 async function resourceUsage(panelUrl, apiKey, serverId) {
-    let urlFormed = new URL(panelUrl).origin
     if (typeof panelUrl !== "string") return Promise.reject(new Error("URL panel is not a string or is not URL"))
+    let urlFormed = new URL(panelUrl).origin
     if (typeof apiKey !== "string") return Promise.reject(new Error("API key is not a string"))
     if (typeof serverId !== "string") return Promise.reject(new Error("Server ID is not a string"))
     return new Promise(async res => {
