@@ -1,13 +1,12 @@
 {
   "name": "lmadactyl",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.0",
     "check-password-strength": "^2.0.4",
-    "lmadactyl": "1.2.7",
     "ws": "^8.5.0"
   },
   "bugs": {
