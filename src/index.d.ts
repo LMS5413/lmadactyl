@@ -66,7 +66,7 @@ interface Features {
     panelUrl: string,
     apiKey: string
   ) => Promise<FeaturesNodeStatus[]>;
-  request: (panelUrl: string, apiKey: string, serverId: string) => Promise<any>;
+  request: (endpoint: string, header: string, method: "get" | "patch" | "post" | "delete" | "put", body:? string) => Promise<any>;
 }
 interface Application {
   createServer: (
