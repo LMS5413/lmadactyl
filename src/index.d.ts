@@ -10,12 +10,11 @@ import {
   UtilsServerList
 } from "./@types/types";
 
-declare module lmadactyl {
-  export const utils: Utils;
-  export const features: Features;
-  export const application: Application;
-  export const account: Account;
-}
+export const utils: Utils;
+export const features: Features;
+export const application: Application;
+export const account: Account;
+
 interface Utils {
   logs: (
     panelUrl: string,
@@ -120,4 +119,3 @@ interface ObjectCreateServer {
     default: number;
   };
 }
-export = lmadactyl;
