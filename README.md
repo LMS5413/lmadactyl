@@ -1,6 +1,11 @@
 # LMADACTYL - Package
 A wrapper for pterodactyl
 
+# OUTDATED - Coming Soon new library...
+
+ Suggestions for replace
+[PteroJS](https://pteropackages.github.io/PteroJS/index.html)
+
 Benefits:
 
     100% use your imagination 
